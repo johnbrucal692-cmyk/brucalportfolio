@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --text: #111111;
+  --muted: #666666;
+  --border: #dddddd;
+  --highlight: #6c63ff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.header {
+  display: flex;
+  width:100%;
+  justify-content: space-between; /* pushes logo left, nav right */
+  align-items: center;
+  box-shadow: 1px 0 1px grey;
+  padding: 3px 30px;
+  background-color: #f4f6f8;
+  color: black;
+  position:sticky;
+  top: 0;
+  z-index: 1000;
+  background: #f4f6f8;
+}
+
+/* LOGO (LEFT SIDE) */
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+.navbar a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+  letter-spacing: 0.01em;
+  color: rgb(81, 80, 80);
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+  margin-left: auto;
+  position:sticky;
+}
+
+.home{
+  transition:0.2s ease;
+}
+
+.about{
+  transition:0.2s ease;
+}
+
+.cont{
+  margin-right: 250px;
+  transition:0.2s ease;
+}
+
+.home:hover{
+  scale:1.2;
+  transition:ease;
+}
+
+.about:hover{
+  scale:1.2;
+  transition:ease;
+}
+
+.cont:hover{
+  scale:1.2;
+  transition:ease;
+}
+
+#nav-logo{
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+link{
+  display: flex;
+  gap: 0.25rem;
+}
+
+.container {
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 45%, #dbeafe 100%);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+/* ACTIVE NAV LINK */
+.active {
+  color: white !important;
+  background-color: black;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.links a:hover {
+  scale:1.1;
+  color: white;
+  background-color:black;
+}
+
+.footer {
+  margin-top: 0px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+  background: black;
+  color: white;
+}

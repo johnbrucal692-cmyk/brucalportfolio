@@ -1,0 +1,163 @@
+/* MAIN HERO LAYOUT */
+.label{
+  display:inline-block;
+  padding:8px 16px;
+  color:black;
+  border-radius:999px;
+  background:rgba(79,70,229,0.1);
+  font-size:12px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+  font-weight:700;
+}
+
+.hero {
+  min-height: 70vh;
+  max-width: 1200px;
+
+  margin: auto;
+  padding: 20px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT CONTENT */
+.content {
+  flex: 1;
+}
+
+.eyebrow {
+  color: grey;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+
+  margin-bottom: 20px;
+}
+
+.name {
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 1.05;
+
+  margin-bottom: 24px;
+}
+
+.description {
+  max-width: 650px;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+
+  color: var(--muted);
+
+  margin-bottom: 35px;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 22px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background: var(--text);
+  color: white;
+  margin-right: 25px;
+  border-radius: 25px;
+  height: 50px;
+}
+
+.primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  scale: 1.05;
+}
+
+.secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 25px;
+  height: 50px;
+  border: 1px solid grey;
+  background: transparent;
+}
+
+.secondary:hover {
+  background: var(--border);
+  transform: translateY(-2px);
+  scale: 1.05;
+}
+
+/* IMAGE */
+.imageWrapper {
+  flex-shrink: 0;
+}
+
+.profileImage {
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  transition: 0.2s ease;
+}
+
+.profileImage:hover{
+  scale:1.1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@keyframes flyInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page {
+  animation: flyInBottom 0.6s ease-out;
+  margin-bottom: 60px;
+}

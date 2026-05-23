@@ -1,0 +1,166 @@
+.main{
+  max-width:900px;
+  margin:auto;
+  padding:5px 25px;
+  font-family:'DM Sans',sans-serif;
+}
+
+/* TITLE */
+.edu{
+  display:inline-block;
+  padding:8px 16px;
+  color:black;
+  border-radius:999px;
+  background:rgba(79,70,229,0.1);
+  font-size:12px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-bottom:40px;
+  font-weight:700;
+}
+
+/* TIMELINE CONTAINER */
+.timeline{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+  padding-left:40px;
+}
+
+/* CENTER LINE */
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:18px;
+  top:0;
+  width:2px;
+  height:100%;
+  background:#e5e7eb;
+}
+
+/* EACH ENTRY */
+.college{
+  position:relative;
+
+  display:flex;
+  gap:20px;
+
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+
+  border:1px solid #e8e6e1;
+
+  padding:20px;
+  border-radius:16px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+
+  transition:0.3s ease;
+}
+
+.badge{
+  position:absolute;
+  top:12px;
+  right:12px;
+
+  font-size:11px;
+  font-weight:600;
+
+  padding:6px 10px;
+  border-radius:999px;
+
+  background:black;
+  color:#ffffff;
+
+  border:1px solid black;
+}
+
+/* DOT ON TIMELINE */
+.college::before{
+  content:"";
+  position:absolute;
+  left:-32px;
+  top:30px;
+
+  width:12px;
+  height:12px;
+
+  background:#4f46e5;
+  border-radius:50%;
+
+  border:3px solid white;
+  box-shadow:0 0 0 2px #e5e7eb;
+}
+
+/* HOVER EFFECT */
+.college:hover{
+  transform:translateX(6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.school{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  border:2px solid #e5e7eb;
+}
+
+.cap{
+  font-family:'DM Serif Display',serif;
+  font-size:2.8rem;
+  margin:0px 0 20px;
+}
+
+/* TEXT */
+.college div{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.college h2{
+  font-size:1.1rem;
+  margin:0;
+  color:#111827;
+}
+
+.college p{
+  margin:0;
+  font-size:0.9rem;
+  color:#6b7280;
+  line-height:1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .timeline{
+    padding-left:20px;
+  }
+
+  .college{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .college::before{
+    left:-10px;
+  }
+}
+
+@keyframes flyInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main {
+  animation: flyInBottom 0.6s ease-out;
+  margin-bottom:60px;
+}
